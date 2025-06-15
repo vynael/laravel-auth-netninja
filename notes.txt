@@ -6,8 +6,17 @@ password : adminPortainerUbuntu
 docker run --name ninja-network-auth \
   -e MYSQL_ROOT_PASSWORD=root \
   -e MYSQL_DATABASE=ninja-network-auth \
-  -p 3306:3306 \
+  -p 3307:3306 \
   -d mysql:8
+
+docker run -d \
+  -p 9000:9000 \
+  --name portainer \
+  --restart=always \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  -v portainer_data:/data \
+  portainer/portainer-ce:latest
+
 
 // untuk membuat folder menjadi repo git
 git init
@@ -24,3 +33,15 @@ git commit -m "first commit"
 
 // git push
 git push -u origin master
+
+git clone .....
+
+
+
+after clone
+composer install
+npm install
+
+
+-----------------
+now tutorial #7
