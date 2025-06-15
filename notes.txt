@@ -9,3 +9,18 @@ docker run --name ninja-network-auth \
   -p 3306:3306 \
   -d mysql:8
 
+// untuk membuat folder menjadi repo git
+git init
+
+// add file
+git add .
+git add (nama_file)
+
+// remote ke origin
+git remote add origin https://github.com/vynael/laravel-auth-netninja.git
+
+// git commit
+git commit -m "first commit"
+
+// git push
+git push -u origin master
