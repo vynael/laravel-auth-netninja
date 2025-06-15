@@ -1,0 +1,11 @@
+--- Docker Portainer
+localhost:9000
+username : admin
+password : adminPortainerUbuntu
+
+docker run --name ninja-network-auth \
+  -e MYSQL_ROOT_PASSWORD=root \
+  -e MYSQL_DATABASE=ninja-network-auth \
+  -p 3306:3306 \
+  -d mysql:8
+
