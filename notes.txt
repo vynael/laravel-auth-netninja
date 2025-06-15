@@ -36,6 +36,7 @@ git push -u origin master
 
 git clone .....
 
+git pull origin master
 
 
 after clone
