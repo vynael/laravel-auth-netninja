@@ -18,30 +18,87 @@ docker run -d \
   portainer/portainer-ce:latest
 
 
-// untuk membuat folder menjadi repo git
+---------------------------------------------------
+
+# 📝 Catatan Git & Setup Laravel Project
+
+## 📁 Membuat Folder Menjadi Repository Git
+
+# Inisialisasi repository Git
 git init
 
-// add file
+# Menambahkan semua file ke staging area
 git add .
-git add (nama_file)
 
-// remote ke origin
-git remote add origin https://github.com/vynael/laravel-auth-netninja.git
+# (Opsional) Tambahkan file tertentu saja
+git add nama_file.php
 
-// git commit
+# Commit perubahan pertama
 git commit -m "first commit"
 
-// git push
-git push -u origin master
+# Tambahkan remote repository (GitHub)
+git remote add origin https://github.com/vynael/laravel-auth-netninja.git
 
-git clone .....
+# Rename branch ke 'main' (opsional, tergantung GitHub)
+git branch -M main
 
-git pull origin master
+# Push ke GitHub
+git push -u origin main
 
+------------------------------------
 
-after clone
+## ⬇️ Clone Repository (di komputer lain / rekan tim)
+
+git clone https://github.com/vynael/laravel-auth-netninja.git
+cd laravel-auth-netninja
+
+---
+
+## 🔄 Sinkronisasi Repo Lokal dengan Remote
+
+# Ambil update terbaru dari remote
+git pull origin main
+
+---
+
+## ⚙️ Setup Laravel Setelah Clone
+
+# Install dependency PHP
+composer install
+
+# Install dependency frontend (JS/CSS)
+npm install
+
+# Duplikasi file environment
+cp .env.example .env
+
+# Generate app key Laravel
+php artisan key:generate
+
+# (Opsional) Jalankan migrasi database
+php artisan migrate
+
+---
+
+## ✅ Ringkasan Alur
+
+# Untuk membuat repo baru:
+git init
+git add .
+git commit -m "first commit"
+git remote add origin https://github.com/vynael/laravel-auth-netninja.git
+git branch -M main
+git push -u origin main
+
+# Untuk clone dan setup Laravel:
+git clone https://github.com/vynael/laravel-auth-netninja.git
+cd laravel-auth-netninja
 composer install
 npm install
+cp .env.example .env
+php artisan key:generate
+php artisan migrate
+
 
 
 -----------------
